@@ -20,7 +20,7 @@ then
 fi
 
 
-ln -sf ~/enviroments/my-projects/dotfiles/.zsh/* ~/.zsh
+ln -sf ~/my-projects/dotfiles/.zsh/* ~/.zsh
 echo "Creating symlink to .zsh in home directory."
 
 create_symlinks

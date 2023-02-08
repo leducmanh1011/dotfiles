@@ -7,7 +7,7 @@ weather() {
 alias ..="cd .."
 alias ...="cd ../.."
 alias ce="cd ~/enviroments"
-alias cmp="cd ~/enviroments/my-projects"
+alias cmp="cd ~/my-projects"
 alias cdl="cd ~/Downloads"
 
 
