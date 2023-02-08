@@ -1,0 +1,18 @@
+[includeIf "gitdir:~/enviroments/"]
+  path = ~/.gitconfig_company
+    
+[includeIf "gitdir:~/my-projects/"]
+  path = ~/.gitconfig_personal
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
+
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+  
+[push]
+  default = simple
