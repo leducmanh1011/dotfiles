@@ -8,6 +8,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ce="cd ~/enviroments"
 alias cmp="cd ~/my-projects"
+alias cdf="cd ~/my-projects/dotfiles"
 alias cdl="cd ~/Downloads"
 
 
