@@ -1,0 +1,16 @@
+{
+  "sync.gist": "40824dd55da707407d4bcbf5132816ad",
+  "sync.removeExtensions": false,
+  "workbench.colorTheme": "Monokai",
+  "workbench.iconTheme": "office-material-icon-theme",
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
+  "workbench.editorAssociations": {
+      "*.xlsx": "cweijan.officeViewer"
+  },
+  "workbench.editor.untitled.hint": "hidden",
+  "files.trimTrailingWhitespace": true,
+  "editor.rulers": [
+      80
+  ]
+}
