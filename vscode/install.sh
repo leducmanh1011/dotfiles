@@ -9,6 +9,7 @@ gerane.Theme-Monokai
 cweijan.vscode-office
 dsznajder.es7-react-js-snippets
 skyran.js-jsx-snippets
+dunstontc.viml
 )
 
 for i in ${pkglist[@]}; do
