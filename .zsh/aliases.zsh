@@ -22,6 +22,7 @@ alias gcp="git cherry-pick"
 alias gcpa="git cherry-pick --abort"
 alias gcpc="git cherry-pick --continue"
 alias gf="git fetch"
+alias gfo="git fetch origin"
 
 # sudo
 alias s="sudo "
