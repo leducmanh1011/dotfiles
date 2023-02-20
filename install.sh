@@ -14,13 +14,13 @@ create_symlinks() {
     done
 }
 
-if [ ! -d "$HOME/.zsh" ] 
+if [ ! -d "$HOME/.zsh" ]
 then
     mkdir ~/.zsh
 fi
 
 
-ln -sf ~/my-projects/dotfiles/.zsh/* ~/.zsh
+ln -sf ~/my-projects/dotfiles/zsh/* ~/.zsh
 echo "Creating symlink to .zsh in home directory."
 
 create_symlinks
