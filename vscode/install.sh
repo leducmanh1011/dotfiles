@@ -11,6 +11,7 @@ dsznajder.es7-react-js-snippets
 skyran.js-jsx-snippets
 dunstontc.viml
 gencay.vscode-chatgpt
+sianglim.slim
 )
 
 for i in ${pkglist[@]}; do
