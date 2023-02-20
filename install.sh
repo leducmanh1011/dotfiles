@@ -14,13 +14,12 @@ create_symlinks() {
     done
 }
 
-if [ ! -d "$HOME/.zsh" ]
-then
-    mkdir ~/.zsh
-fi
-
-
+mkdir -p ~/.zsh
 ln -sf ~/my-projects/dotfiles/zsh/* ~/.zsh
 echo "Creating symlink to .zsh in home directory."
+
+rm -rf ~/.config/nvim
+ln -sf ~/my-projects/dotfiles/nvim ~/.config/nvim
+echo "Creating symlink to .config/nvim in home directory."
 
 create_symlinks
