@@ -62,4 +62,5 @@ return {
       }
     end,
   },
+  { "tanvirtin/monokai.nvim" },
 }
