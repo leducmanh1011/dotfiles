@@ -12,6 +12,7 @@ skyran.js-jsx-snippets
 dunstontc.viml
 gencay.vscode-chatgpt
 sianglim.slim
+sumneko.lua
 )
 
 for i in ${pkglist[@]}; do
