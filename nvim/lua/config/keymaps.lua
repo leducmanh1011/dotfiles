@@ -21,6 +21,6 @@ map("n", "<F5>", ":NvimTreeToggle<CR>", { desc = "Toggle Nvim Tree" })
 
 -- Move to window using the movement keys
 map("n", "<left>", "<C-w>h")
-map("n", "<down>", "<C-w>j")
-map("n", "<up>", "<C-w>k")
+-- map("n", "<down>", "<C-w>j")
+-- map("n", "<up>", "<C-w>k")
 map("n", "<right>", "<C-w>l")
