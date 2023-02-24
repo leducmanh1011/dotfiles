@@ -15,7 +15,7 @@ end
 
 M.map = map
 
-map("i", "jk", "<Esc>", { desc = "Esc" })
+map("i", "jj", "<Esc>", { desc = "Esc" })
 map("n", "1", "^", { desc = "Go to beginning of line" })
 map("n", "0", "$", { desc = "Go to end of line" })
 
@@ -23,9 +23,9 @@ map("n", "0", "$", { desc = "Go to end of line" })
 map("n", "<F5>", ":NvimTreeToggle<CR>", { desc = "Toggle Nvim Tree" })
 
 -- Move to window using the movement keys
-map("n", "<left>", "<C-w>h")
+map("n", "<leader><left>", "<C-w>h")
 -- map("n", "<down>", "<C-w>j")
 -- map("n", "<up>", "<C-w>k")
-map("n", "<right>", "<C-w>l")
+map("n", "<leader><right>", "<C-w>l")
 
 return M
