@@ -1,6 +1,11 @@
 return {
   { "nvim-treesitter/playground", cmd = "TSPlaygroundToggle" },
   {
+    "nvim-treesitter/nvim-treesitter-context",
+    event = "BufReadPre",
+    config = true,
+  },
+  {
     "nvim-treesitter/nvim-treesitter",
     config = function ()
       require'nvim-treesitter.configs'.setup {
