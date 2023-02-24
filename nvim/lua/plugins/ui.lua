@@ -72,14 +72,8 @@ return {
             show_close_icon = true,
             offsets = {
               {
-                filetype = "neo-tree",
+                filetype = "NvimTree",
                 text = "File Explorer", -- "File Explorer" | function ,
-                text_align = "center",
-                separator = true,
-              },
-              {
-                filetype = "toggleterm",
-                text = "Terminal",
                 text_align = "center",
                 separator = true,
               },
