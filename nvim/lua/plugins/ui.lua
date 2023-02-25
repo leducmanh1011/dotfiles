@@ -59,6 +59,7 @@ return {
       })
     end,
   },
+  -- show tabline name each file
   {
     "akinsho/bufferline.nvim",
     config = function()
@@ -72,14 +73,8 @@ return {
             show_close_icon = true,
             offsets = {
               {
-                filetype = "neo-tree",
+                filetype = "NvimTree",
                 text = "File Explorer", -- "File Explorer" | function ,
-                text_align = "center",
-                separator = true,
-              },
-              {
-                filetype = "toggleterm",
-                text = "Terminal",
                 text_align = "center",
                 separator = true,
               },
@@ -93,5 +88,20 @@ return {
           map("n", "<leader>" .. n, "<CMD>BufferLineGoToBuffer" .. n .. "<CR>", { desc = "Go to Buffer " .. n })
       end
     end,
-  }
+  },
+  -- smooth close buffer
+  {
+    "ojroques/nvim-bufdel",
+    config = function()
+      require("bufdel").setup({
+        next = "tabs",  -- or "cycle", "alternate"
+        quit = false,    -- quit Neovim when last buffer is closed
+      })
+      
+      local map = require("config/keymaps").map
+
+      map("n", "<leader>q", "<CMD>BufDel<CR>", { desc = "Delete the current buffer" })
+      map("n", "<leader>q!", "<CMD>BufDel<CR>", { desc = "Delete the current buffer and ignore changes" }) 
+    end,
+  },
 }
