@@ -16,6 +16,8 @@ opt.showmode = true         -- Show --MODE--
 opt.smartcase = true        -- Automatically match case if Capital letters are present
 opt.laststatus = 3          -- Set global statusline
 opt.lazyredraw = true       -- Screen will not be redrawn while executing macros
+opt.termguicolors = true
+      
 
 -- Tabs, indent
 opt.expandtab = true        -- Use spaces instead of tabs
