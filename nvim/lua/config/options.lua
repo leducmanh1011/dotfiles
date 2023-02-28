@@ -3,6 +3,7 @@
 -- [2] Defaults - *nvim-defaults*
 
 local g = vim.g       -- Global variables
+local o = vim.o
 local opt = vim.opt   -- Set options
 
 -- Neovim UI
@@ -21,6 +22,12 @@ opt.tabstop = 2             -- 1 tab == 2 spaces
 opt.autoindent = true       -- Uses the indent from the previous line
 opt.smartindent = true      -- Autoindent new lines
 opt.shiftwidth = 2          -- Shift 2 spaces when tab
+opt.list = true
+o.listchars = "lead:·,trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂"
+o.fillchars = "eob: ,fold: ,foldsep: ,foldopen:,foldclose:"
+-- opt.listchars:append "eol:↴"
+opt.undofile = true
+opt.swapfile = false
 
 -- Memory, CPU
 opt.hidden = true           -- Enable background buffers
