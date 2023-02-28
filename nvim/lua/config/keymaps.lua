@@ -23,9 +23,11 @@ map("n", "0", "$", { desc = "Go to end of line" })
 map("n", "<F5>", ":NvimTreeToggle<CR>", { desc = "Toggle Nvim Tree" })
 
 -- Move to window using the movement keys
-map("n", "<leader><left>", "<C-w>h")
+map("n", "<leader><left>", "<C-w>h", { desc = "Move to left window" })
 -- map("n", "<down>", "<C-w>j")
 -- map("n", "<up>", "<C-w>k")
-map("n", "<leader><right>", "<C-w>l")
+map("n", "<leader><right>", "<C-w>l", { desc = "Move to right window" })
+
+map("n", "<leader>m", ":WhichKey<CR>", { desc = "Show all mappings" })
 
 return M
