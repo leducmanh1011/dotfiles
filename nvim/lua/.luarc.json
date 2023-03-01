@@ -1,0 +1,26 @@
+{
+    "workspace.library": [
+        "/home/le.duc.manh/.config/nvim",
+        "/home/le.duc.manh/.local/share/nvim/lazy/lazy.nvim",
+        "/home/le.duc.manh/.local/share/nvim/lazy/cmp-nvim-lsp",
+        "/home/le.duc.manh/.local/share/nvim/lazy/neodev.nvim",
+        "/home/le.duc.manh/.local/share/nvim/lazy/mason-lspconfig.nvim",
+        "/home/le.duc.manh/.local/share/nvim/lazy/mason.nvim",
+        "/home/le.duc.manh/.local/share/nvim/lazy/nvim-lspconfig",
+        "/home/le.duc.manh/.local/share/nvim/lazy/gruvbox.nvim",
+        "/home/le.duc.manh/.local/share/nvim/lazy/rose-pine",
+        "/home/le.duc.manh/.local/share/nvim/lazy/bufferline.nvim",
+        "/home/le.duc.manh/.local/share/nvim/lazy/lualine.nvim",
+        "/home/le.duc.manh/.local/share/nvim/lazy/nvim-web-devicons",
+        "/home/le.duc.manh/.local/share/nvim/lazy/nvim-notify",
+        "/home/le.duc.manh/.local/share/nvim/lazy/nvim-tree.lua",
+        "/home/le.duc.manh/.local/share/nvim/lazy/alpha-nvim",
+        "/home/le.duc.manh/.local/share/nvim/lazy/tokyonight.nvim",
+        "/usr/share/nvim/runtime",
+        "/usr/lib/nvim",
+        "/home/le.duc.manh/.local/state/nvim/lazy/readme",
+        "/home/le.duc.manh/.local/share/nvim/lazy/cmp-nvim-lsp/after",
+        "${3rd}/luassert/library"
+    ],
+    "workspace.checkThirdParty": false
+}
