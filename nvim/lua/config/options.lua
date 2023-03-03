@@ -26,7 +26,7 @@ opt.autoindent = true       -- Uses the indent from the previous line
 opt.smartindent = true      -- Autoindent new lines
 opt.shiftwidth = 2          -- Shift 2 spaces when tab
 opt.list = true
-o.listchars = "lead:·,trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂"
+-- o.listchars = "lead:·,trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂"
 o.fillchars = "eob: ,fold: ,foldsep: ,foldopen:,foldclose:"
 -- opt.listchars:append "eol:↴"
 opt.undofile = true
