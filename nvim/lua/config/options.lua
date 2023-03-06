@@ -14,7 +14,10 @@ opt.colorcolumn = "80"      -- Line lienght marker at 80 columns
 opt.cursorline = true       -- Hightlight cursor line
 opt.showmode = true         -- Show --MODE--
 opt.smartcase = true        -- Automatically match case if Capital letters are present
-opt.laststatus=3            -- Set global statusline
+opt.laststatus = 3          -- Set global statusline
+opt.lazyredraw = true       -- Screen will not be redrawn while executing macros
+opt.termguicolors = true
+      
 
 -- Tabs, indent
 opt.expandtab = true        -- Use spaces instead of tabs
@@ -23,7 +26,7 @@ opt.autoindent = true       -- Uses the indent from the previous line
 opt.smartindent = true      -- Autoindent new lines
 opt.shiftwidth = 2          -- Shift 2 spaces when tab
 opt.list = true
-o.listchars = "lead:·,trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂"
+-- o.listchars = "lead:·,trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂"
 o.fillchars = "eob: ,fold: ,foldsep: ,foldopen:,foldclose:"
 -- opt.listchars:append "eol:↴"
 opt.undofile = true

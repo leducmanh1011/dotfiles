@@ -12,6 +12,7 @@ return {
       require("nvim-tree").setup({
         auto_reload_on_write = true,
         sort_by = "case_sensitive",
+        reload_on_bufenter = true,
         view = {
           width = 30,
           mappings = {
@@ -62,6 +63,11 @@ return {
               },
             },
           }
+        },
+          update_focused_file = {
+          enable = false,
+          update_root = false,
+          ignore_list = {},
         },
         filters = {
           dotfiles = true,
