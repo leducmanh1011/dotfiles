@@ -9,7 +9,10 @@ local null_ls_sources = {
   },
 }
 
-local sources = {}
+local sources = {
+  null_ls.builtins.formatting.rubocop,
+  null_ls.builtins.diagnostics.rubocop,
+}
 
 for type, type_sources in pairs(null_ls_sources) do
   for _, source in ipairs(type_sources) do
