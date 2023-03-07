@@ -1,6 +1,6 @@
 local M = {}
 
-M.setup = function(opts)
+M.setup = function()
     local lspconfig = require("lspconfig")
     lspconfig.solargraph.setup({})
 end

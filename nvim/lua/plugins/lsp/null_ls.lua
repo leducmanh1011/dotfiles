@@ -3,6 +3,7 @@ local null_ls = require("null-ls")
 local null_ls_sources = {
   formatting = {
       "eslint",
+      "erb_lint",
       "stylua",
       "rubocop",
   },
