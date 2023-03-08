@@ -106,4 +106,6 @@ source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

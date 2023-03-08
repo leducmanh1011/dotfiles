@@ -1,5 +1,7 @@
 local M = {}
 
+-- Require ruby version >= 2.7.0
+
 M.setup = function()
     local lspconfig = require("lspconfig")
     lspconfig.solargraph.setup({
@@ -10,7 +12,7 @@ M.setup = function()
           solargraph = {
               autoformat = true,
               completion = true,
-              diagnostic = true,
+              diagnostics = true,
               folding = true,
               references = true,
               rename = true,
