@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@tailwindcss/language-server": "^0.0.11",
+    "eslint_d": "^12.2.1",
+    "tree-sitter-cli": "^0.20.7",
+    "vscode-langservers-extracted": "^4.6.0"
+  }
+}

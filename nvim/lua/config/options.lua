@@ -17,7 +17,7 @@ opt.smartcase = true        -- Automatically match case if Capital letters are p
 opt.laststatus = 3          -- Set global statusline
 opt.lazyredraw = true       -- Screen will not be redrawn while executing macros
 opt.termguicolors = true
-      
+opt.clipboard = "unnamedplus"
 
 -- Tabs, indent
 opt.expandtab = true        -- Use spaces instead of tabs
