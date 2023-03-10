@@ -22,4 +22,8 @@ rm -rf ~/.config/nvim
 ln -sf ~/my-projects/dotfiles/nvim ~/.config/nvim
 echo "Creating symlink to .config/nvim in home directory."
 
+rm -rf ~/.config/neofetch
+ln -sf ~/my-projects/dotfiles/neofetch ~/.config/neofetch
+echo "Creating symlink to .config/neofetch in home directory."
+
 create_symlinks
