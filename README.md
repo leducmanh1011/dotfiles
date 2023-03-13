@@ -7,6 +7,9 @@ What's in there?
 all my configuration including:
 
 * ZSH
+* Neovim
+* Neofetch
+* Tmux
 * VScode
 * Git
 * Updating..
