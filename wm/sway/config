@@ -14,11 +14,13 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term x-terminal-emulator
+# set $term x-terminal-emulator
+# set $term gnome-terminal
+set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 ### Output configuration
 #
@@ -237,6 +239,14 @@ bindsym Ctrl+Print exec grim $(xdg-user-dir PICTURES)/$(date +'%s_grim.png') - |
 bindsym Shift+Print exec grim $(xdg-user-dir PICTURES)/$(date +'%s_grim.png') -g "$(slurp)"
 bindsym Ctrl+Shift+Print exec grim $(xdg-user-dir PICTURES)/$(date +'%s_grim.png') -g "$(slurp)" | wl-copy
 
-bindsym $mod+l+s exec "grim /tmp/_sway_lock_image.png && ffmpeg -i /tmp/_sway_lock_image.png -filter_complex 'gblur=sigma=50' /tmp/sway_lock_image.png -y && swaylock -f -i /tmp/sway_lock_image.png"
+# Run rofi
+bindsym $mod+d exec sh ~/.config/sway/scripts/run-rofi.sh
+
+# Lock screen
+bindsym $mod+l exec sh ~/.config/sway/scripts/lock-screen.sh
+
+
+# Hide cursor
+seat seat0 hide_cursor 5000
 
 include /etc/sway/config.d/*
