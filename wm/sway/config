@@ -236,8 +236,9 @@ bar {
 # Screenshots
 bindsym Print exec grim $(xdg-user-dir PICTURES)/$(date +'%s_grim.png') -o DP-1
 bindsym Ctrl+Print exec grim $(xdg-user-dir PICTURES)/$(date +'%s_grim.png') - | wl-copy
-bindsym Shift+Print exec grim $(xdg-user-dir PICTURES)/$(date +'%s_grim.png') -g "$(slurp)"
-bindsym Ctrl+Shift+Print exec grim $(xdg-user-dir PICTURES)/$(date +'%s_grim.png') -g "$(slurp)" | wl-copy
+# Select a region and screenshoot
+bindsym Shift+Print exec grim -g "$(slurp)" $(xdg-user-dir PICTURES)/$(date +'%s_grim.png')
+bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" $(xdg-user-dir PICTURES)/$(date +'%s_grim.png') | wl-copy
 
 # Run rofi
 bindsym $mod+d exec sh ~/.config/sway/scripts/run-rofi.sh
@@ -251,10 +252,11 @@ bindsym $mod+o exec sh ~/.config/sway/scripts/lock-screen.sh
 default_border none
 default_floating_border none
 font pango:monospace 0
-titlebar_padding 1
+# titlebar_padding 1
 titlebar_border_thickness 0
 
 # Hide cursor
 seat seat0 hide_cursor 5000
 
+# gaps outer 100
 include /etc/sway/config.d/*
