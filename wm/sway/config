@@ -83,7 +83,7 @@ exec swayidle -w \
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+Shift+d exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -243,8 +243,16 @@ bindsym Ctrl+Shift+Print exec grim $(xdg-user-dir PICTURES)/$(date +'%s_grim.png
 bindsym $mod+d exec sh ~/.config/sway/scripts/run-rofi.sh
 
 # Lock screen
-bindsym $mod+l exec sh ~/.config/sway/scripts/lock-screen.sh
+bindsym $mod+o exec sh ~/.config/sway/scripts/lock-screen.sh
 
+# Hide title bar
+# for_window [class="^.*"] border pixel 1
+# default_border pixel 1px
+default_border none
+default_floating_border none
+font pango:monospace 0
+titlebar_padding 1
+titlebar_border_thickness 0
 
 # Hide cursor
 seat seat0 hide_cursor 5000
