@@ -26,12 +26,16 @@ rm -rf ~/.config/neofetch
 ln -sf ~/my-projects/dotfiles/neofetch ~/.config/neofetch
 echo "Creating symlink to .config/neofetch in home directory."
 
+rm -rf ~/.config/alacritty
+ln -sf ~/my-projects/dotfiles/alacritty ~/.config/alacritty
+echo "Creating symlink to .config/sway in home directory."
+
 rm -rf ~/.config/sway
 ln -sf ~/my-projects/dotfiles/wm/sway ~/.config/sway
 echo "Creating symlink to .config/sway in home directory."
 
-rm -rf ~/.config/alacritty
-ln -sf ~/my-projects/dotfiles/alacritty ~/.config/alacritty
-echo "Creating symlink to .config/sway in home directory."
+rm -rf ~/.config/rofi
+ln -sf ~/my-projects/dotfiles/wm/rofi ~/.config/rofi
+echo "Creating symlink to .config/rofi in home directory."
 
 create_symlinks
