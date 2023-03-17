@@ -30,6 +30,10 @@ rm -rf ~/.config/alacritty
 ln -sf ~/my-projects/dotfiles/alacritty ~/.config/alacritty
 echo "Creating symlink to .config/sway in home directory."
 
+rm -rf ~/.config/wallpapers
+ln -sf ~/my-projects/dotfiles/wallpapers ~/.config/wallpapers
+echo "Creating symlink to .config/wallpapers in home directory."
+
 rm -rf ~/.config/sway
 ln -sf ~/my-projects/dotfiles/wm/sway ~/.config/sway
 echo "Creating symlink to .config/sway in home directory."
