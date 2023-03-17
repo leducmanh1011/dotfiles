@@ -246,6 +246,9 @@ bindsym $mod+d exec sh ~/.config/sway/scripts/run-rofi.sh
 # Lock screen
 bindsym $mod+o exec sh ~/.config/sway/scripts/lock-screen.sh
 
+# Rofi power menu
+bindsym $mod+p exec rofi -show power-menu -modi power-menu:~/.config/sway/scripts/rofi-power-menu.sh
+
 # Hide title bar
 # for_window [class="^.*"] border pixel 1
 # default_border pixel 1px
