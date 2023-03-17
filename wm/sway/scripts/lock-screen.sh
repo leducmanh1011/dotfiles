@@ -1,10 +1,40 @@
-#! /bin/sh
+#! /bin/bash
 
 # Screenshoots
-grim /tmp/_sway_lock_image.png
+# grim /tmp/_sway_lock_image.png
 
 # Blurred lock screen
-ffmpeg -i /tmp/_sway_lock_image.png -filter_complex 'gblur=sigma=50' /tmp/sway_lock_image.png -y
+# ffmpeg -i /tmp/_sway_lock_image.png -filter_complex 'gblur=sigma=50' /tmp/sway_lock_image.png -y
 
 # Run swaylock
-swaylock -f -i /tmp/sway_lock_image.png
+# swaylock -f -i /tmp/sway_lock_image.png
+
+# Improve display per-output
+# Dependencies:
+# --------
+# swaylock
+#---------
+# grim
+# --------
+# ffmpeg
+# or
+# corrupter (https://github.com/r00tman/corrupter)
+# imagemagick
+# --------
+IMAGE=/tmp/_sway_lock_image.png
+LOCKARGS=""
+
+for OUTPUT in `swaymsg -t get_outputs | jq -r '.[] | select(.active == true) | .name'`
+do
+    IMAGE=/tmp/$OUTPUT-sway-lock.png
+    LOCK_IMAGE=$IMAGE-blur.png
+
+    grim -o $OUTPUT $IMAGE
+    ffmpeg -i $IMAGE -filter_complex 'gblur=sigma=50' $LOCK_IMAGE -y
+
+    LOCKARGS="${LOCKARGS} --image ${OUTPUT}:${LOCK_IMAGE}"
+    IMAGES="${IMAGES} ${IMAGE} ${LOCK_IMAGE}"
+done
+
+swaylock $LOCKARGS
+rm $IMAGE
