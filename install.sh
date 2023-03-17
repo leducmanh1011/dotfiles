@@ -42,4 +42,8 @@ rm -rf ~/.config/rofi
 ln -sf ~/my-projects/dotfiles/wm/rofi ~/.config/rofi
 echo "Creating symlink to .config/rofi in home directory."
 
+rm -rf ~/.config/waybar
+ln -sf ~/my-projects/dotfiles/wm/waybar ~/.config/waybar
+echo "Creating symlink to .config/waybar in home directory."
+
 create_symlinks
