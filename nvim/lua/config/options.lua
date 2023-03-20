@@ -15,7 +15,7 @@ opt.cursorline = true       -- Hightlight cursor line
 opt.showmode = true         -- Show --MODE--
 opt.smartcase = true        -- Automatically match case if Capital letters are present
 opt.laststatus = 3          -- Set global statusline
-opt.lazyredraw = true       -- Screen will not be redrawn while executing macros
+-- opt.lazyredraw = true       -- Screen will not be redrawn while executing macros
 opt.termguicolors = true
 opt.clipboard = "unnamedplus"
 
@@ -35,6 +35,5 @@ opt.swapfile = false
 -- Memory, CPU
 opt.hidden = true           -- Enable background buffers
 opt.history = 100           -- Remember N lines in history
-opt.lazyredraw = true       -- Faster scrolling
 opt.synmaxcol = 240         -- Max column for syntax highlight
 opt.updatetime = 250        -- ms to wait for trigger an event
