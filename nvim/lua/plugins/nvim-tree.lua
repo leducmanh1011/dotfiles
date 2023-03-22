@@ -14,7 +14,7 @@ return {
         sort_by = "case_sensitive",
         reload_on_bufenter = true,
         view = {
-          width = 30,
+          width =50,
           mappings = {
             list = {
               { key = "u", action = "dir_up" },

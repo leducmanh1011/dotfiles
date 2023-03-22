@@ -30,7 +30,7 @@ do
     LOCK_IMAGE=$IMAGE-blur.png
 
     grim -o $OUTPUT $IMAGE
-    ffmpeg -i $IMAGE -filter_complex 'gblur=sigma=50' $LOCK_IMAGE -y
+    ffmpeg -i $IMAGE -filter_complex 'gblur=sigma=20' $LOCK_IMAGE -y
 
     LOCKARGS="${LOCKARGS} --image ${OUTPUT}:${LOCK_IMAGE}"
     IMAGES="${IMAGES} ${IMAGE} ${LOCK_IMAGE}"
