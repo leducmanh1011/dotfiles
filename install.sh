@@ -46,4 +46,8 @@ rm -rf ~/.config/waybar
 ln -sf ~/my-projects/dotfiles/wm/waybar ~/.config/waybar
 echo "Creating symlink to .config/waybar in home directory."
 
+rm -rf ~/.config/swaylock
+ln -sf ~/my-projects/dotfiles/wm/swaylock ~/.config/swaylock
+echo "Creating symlink to .config/swaylock in home directory."
+
 create_symlinks
