@@ -8,6 +8,7 @@ all my configuration including:
 
 * ZSH
 * Neovim
+* Sway WM
 * Neofetch
 * Tmux
 * VScode
