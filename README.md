@@ -1,4 +1,9 @@
-# dotfiles
+# My dotfiles
+
+![home](https://github.com/leducmanh1011/dotfiles/blob/master/screenshots/home.png)
+
+![code](https://github.com/leducmanh1011/dotfiles/blob/master/screenshots/code.png)
+
 
 ## Contents
 
@@ -12,7 +17,6 @@ all my configuration including:
 * Neofetch
 * Tmux
 * VScode
-* Git
 * Updating..
 
 
