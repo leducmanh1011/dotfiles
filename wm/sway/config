@@ -25,7 +25,7 @@ set $term alacritty
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.config/wallpapers/sway_wallpaper.jpg fill
+output * bg ~/.config/wallpapers/KDA-kaisa.jpg fill
 
 # workspace 1 output HDMI-A-2
 # workspace 2 output HDMI-A-1
