@@ -263,3 +263,8 @@ seat seat0 hide_cursor 5000
 
 # gaps outer 100
 include /etc/sway/config.d/*
+
+
+# Setting sway specific executions
+exec mako
+# exec swaybg -c "#151718"

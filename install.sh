@@ -50,4 +50,8 @@ rm -rf ~/.config/swaylock
 ln -sf ~/my-projects/dotfiles/wm/swaylock ~/.config/swaylock
 echo "Creating symlink to .config/swaylock in home directory."
 
+rm -rf ~/.config/mako
+ln -sf ~/my-projects/dotfiles/wm/mako ~/.config/mako
+echo "Creating symlink to .config/mako in home directory."
+
 create_symlinks
