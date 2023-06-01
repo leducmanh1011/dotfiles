@@ -21,6 +21,8 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# Notifications message
+set $screenshot_msg "The screenshot is saved in the ~/Pictures folder."
 
 ### Output configuration
 #
@@ -234,11 +236,11 @@ bar {
 # FILE=${3:-$(getTargetDirectory)/$(date +"%Y-%m-%d-%H:%M:%S").png}
 
 # Screenshots
-bindsym Print exec grim $(xdg-user-dir PICTURES)/$(date +'%s_grim.png') -o DP-1
-bindsym Ctrl+Print exec grim $(xdg-user-dir PICTURES)/$(date +'%s_grim.png') - | wl-copy
+bindsym Print exec grim $(xdg-user-dir PICTURES)/$(date +'%s_grim.png') -o DP-1 && notify-send $screenshot_msg
+bindsym Ctrl+Print exec grim $(xdg-user-dir PICTURES)/$(date +'%s_grim.png') - | wl-copy && notify-send $screenshot_msg
 # Select a region and screenshoot
-bindsym Shift+Print exec grim -g "$(slurp)" $(xdg-user-dir PICTURES)/$(date +'%s_grim.png')
-bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" $(xdg-user-dir PICTURES)/$(date +'%s_grim.png') | wl-copy
+bindsym Shift+Print exec grim -g "$(slurp)" $(xdg-user-dir PICTURES)/$(date +'%s_grim.png') && notify-send $screenshot_msg
+bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" $(xdg-user-dir PICTURES)/$(date +'%s_grim.png') | wl-copy && notify-send $screenshot_msg
 
 # Run rofi
 bindsym $mod+d exec sh ~/.config/sway/scripts/run-rofi.sh
