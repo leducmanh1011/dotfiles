@@ -1,4 +1,15 @@
 # makoctl reload -- Reload Mako
+# Solarized Dark color scheme
+# https://github.com/altercation/solarized#the-values
+# font=Source Sans Pro Semi-Bold 10
+# background-color=#002B36
+# text-color=#839496
+# border-color=#073642
+# default-timeout=5000
+# [urgency=high]
+# text-color=#CB4B16
+# width=400
+
 # Default Mako Config
 font=SF Pro Text Regular 10
 text-color=#ffffff
@@ -8,7 +19,7 @@ border-size=2
 border-radius=4
 padding=5
 height=200
-width=300
+width=400
 
 layer=overlay
 default-timeout=5000
