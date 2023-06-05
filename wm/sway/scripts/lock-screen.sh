@@ -23,6 +23,7 @@
 # --------
 IMAGE=/tmp/_sway_lock_image.png
 LOCKARGS=""
+ICON=$HOME/.config/swaylock/icons/linux.png
 
 for OUTPUT in `swaymsg -t get_outputs | jq -r '.[] | select(.active == true) | .name'`
 do
@@ -30,7 +31,14 @@ do
     LOCK_IMAGE=$IMAGE-blur.png
 
     grim -o $OUTPUT $IMAGE
-    ffmpeg -i $IMAGE -filter_complex 'gblur=sigma=20' $LOCK_IMAGE -y
+
+    # Only blur
+    # ffmpeg -i $IMAGE -filter_complex 'gblur=sigma=20' $LOCK_IMAGE -y
+    # Blur image and over lay icon center
+    ffmpeg -i $IMAGE -vf \
+      "[in] gblur=sigma=20  [blurred]; movie=$ICON [logo];
+      [blurred][logo] overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2 [out]" \
+      $LOCK_IMAGE
 
     LOCKARGS="${LOCKARGS} --image ${OUTPUT}:${LOCK_IMAGE}"
     IMAGES="${IMAGES} ${IMAGE} ${LOCK_IMAGE}"

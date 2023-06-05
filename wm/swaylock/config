@@ -4,30 +4,35 @@ show-failed-attempts
 # clock
 # datestr=%B %d %Y
 
-indicator-radius=200
+indicator-radius=160
 indicator-thickness=20
 color=#00000000
 line-color=#181825
 ring-color=#1e1e2e
-inside-color=#181825
 key-hl-color=#cba6f7
 separator-color=#00000000
 text-color=#cdd6f4
 line-ver-color=#cba6f7
 ring-ver-color=#cba6f7
-inside-ver-color=#181825
+# inside-color=#181825
+# inside-ver-color=#181825
+inside-color=#2e344098
+# inside-ver-color=#5e81ac
+inside-ver-color=#2e344098
 text-ver-color=#cdd6f4
 ring-wrong-color=#f38ba8
 text-wrong-color=#f38ba8
-inside-wrong-color=#181825
-inside-clear-color=#181825
+# inside-wrong-color=#181825
+# inside-clear-color=#181825
+inside-wrong-color=#2e344098
+inside-clear-color=#2e344098
 text-clear-color=#cdd6f4
 ring-clear-color=#cba6f7
 line-clear-color=#181825
 line-wrong-color=#181825
 bs-hl-color=#f38ba8
 
-image=~/.config/wallpapers/sway_wallpaper.jpg
+image=~/.config/wallpapers/default_lock_screen.png
 # scaling=center
 font=JetBrains Mono Nerd Font
 font-size=50

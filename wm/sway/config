@@ -27,7 +27,7 @@ set $screenshot_msg "The screenshot is saved in the ~/Pictures folder."
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.config/wallpapers/wp.png fill
+output * bg ~/.config/wallpapers/forest.jpg fill
 
 # workspace 1 output HDMI-A-2
 # workspace 2 output HDMI-A-1
