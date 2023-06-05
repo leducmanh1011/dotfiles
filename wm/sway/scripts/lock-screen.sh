@@ -38,7 +38,7 @@ do
     ffmpeg -i $IMAGE -vf \
       "[in] gblur=sigma=20  [blurred]; movie=$ICON [logo];
       [blurred][logo] overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2 [out]" \
-      $LOCK_IMAGE
+      $LOCK_IMAGE -y
 
     LOCKARGS="${LOCKARGS} --image ${OUTPUT}:${LOCK_IMAGE}"
     IMAGES="${IMAGES} ${IMAGE} ${LOCK_IMAGE}"
