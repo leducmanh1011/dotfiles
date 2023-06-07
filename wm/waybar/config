@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/spotify"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock", "custom/power"],
+    "modules-right": ["custom/keyboard-layout", "pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock", "custom/power"],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
@@ -82,9 +82,16 @@
     },
     "custom/power": {
       "format": " ", // This icon is provided by the Awesome-fonts collection, not sure how to paste it unfortunately
-
       "on-click": "swaynag -t warning -m 'Power Menu Options' -b 'Shutdown'  'shutdown -h now' -b 'Restart' 'shutdown -r now' -b 'Logout' 'swaymsg exit' -b 'Hibernate' 'systemctl hibernate' --background=#005566 --button-background=#009999 --button-border=#002b33 --border-bottom=#002b33"
     },
+     "custom/keyboard-layout": {
+       "format": " {}",
+       //"exec": "[[ \"$(ibus engine)\" == \"Bamboo\" ]] && echo 'Vietnamese (Bamboo)' || echo 'English (US)'",
+       "exec": "sh $HOME/.config/sway/scripts/ibus-engine.sh",
+       //"on-click": "sh $HOME/.config/sway/scripts/kblayout.sh",
+       "interval": 1,
+       "signal": 15
+     },
       "return-type": "json",
       "exec-if": "which swaync-client",
       "exec": "swaync-client -swb",
