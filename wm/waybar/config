@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/spotify"],
     "modules-center": ["sway/window"],
-    "modules-right": ["custom/keyboard-layout", "pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock", "custom/power"],
+    "modules-right": ["custom/keyboard-layout", "custom/weather", "pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock", "custom/power"],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
@@ -31,13 +31,16 @@
         "spacing": 10
     },
     "clock": {
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%Y-%m-%d}",
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>"
     },
     "cpu": {
-        "format": "{usage}% "
+        "format": "{usage}% ",
+        "on-click": "alacritty -e htop"
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% ",
+        "on-click": "alacritty -e htop"
     },
     "battery": {
         "bat": "BAT0",
@@ -81,7 +84,7 @@
         "exec-if": "pgrep spotify"
     },
     "custom/power": {
-      "format": " ", // This icon is provided by the Awesome-fonts collection, not sure how to paste it unfortunately
+      "format": " ⏻ ", // This icon is provided by the Awesome-fonts collection, not sure how to paste it unfortunately
       "on-click": "swaynag -t warning -m 'Power Menu Options' -b 'Shutdown'  'shutdown -h now' -b 'Restart' 'shutdown -r now' -b 'Logout' 'swaymsg exit' -b 'Hibernate' 'systemctl hibernate' --background=#005566 --button-background=#009999 --button-border=#002b33 --border-bottom=#002b33"
     },
      "custom/keyboard-layout": {
@@ -92,6 +95,13 @@
        "interval": 1,
        "signal": 15
      },
+     "custom/weather": {
+       "format": "{}",
+       "tooltip": true,
+       "interval": 3600,
+       "exec": "python3 $HOME/.config/sway/scripts/waybar-wttr.py",
+       "return-type": "json"
+    },
       "return-type": "json",
       "exec-if": "which swaync-client",
       "exec": "swaync-client -swb",
