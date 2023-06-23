@@ -98,7 +98,7 @@
      "custom/weather": {
        "format": "{}",
        "tooltip": true,
-       "interval": 3600,
+       "interval": 600,
        "exec": "python3 $HOME/.config/sway/scripts/waybar-wttr.py",
        "return-type": "json"
     },
