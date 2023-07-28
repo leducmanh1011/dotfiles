@@ -49,11 +49,12 @@ output HDMI-A-1 pos 0 0
 #               resume 'swaymsg "output * dpms on"' \
 #          before-sleep 'swaylock -f -c 000000'
 #
-exec swayidle -w \
-         timeout 300 'grim /tmp/_sway_lock_image.png && ffmpeg -i /tmp/_sway_lock_image.png -filter_complex "gblur=sigma=50" /tmp/sway_lock_image.png -y && swaylock -f -i /tmp/sway_lock_image.png' \
-         timeout 600 'swaymsg "output * dpms off"' \
-              resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
+# Ignore auto lock screen after 10 min inactive
+# exec swayidle -w \
+#          timeout 300 'grim /tmp/_sway_lock_image.png && ffmpeg -i /tmp/_sway_lock_image.png -filter_complex "gblur=sigma=50" /tmp/sway_lock_image.png -y && swaylock -f -i /tmp/sway_lock_image.png' \
+#          timeout 600 'swaymsg "output * dpms off"' \
+#               resume 'swaymsg "output * dpms on"' \
+#          before-sleep 'swaylock -f -c 000000'
 
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
