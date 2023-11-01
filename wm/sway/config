@@ -264,7 +264,10 @@ titlebar_border_thickness 0
 # Hide cursor
 seat seat0 hide_cursor 5000
 
-# gaps outer 100
+# Set inner/outer gaps
+gaps inner 20
+gaps outer 0
+
 include /etc/sway/config.d/*
 
 
