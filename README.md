@@ -1,9 +1,12 @@
 # My dotfiles
 
+![rofi](https://github.com/leducmanh1011/dotfiles/blob/master/screenshots/rofi.png)
+
 ![home](https://github.com/leducmanh1011/dotfiles/blob/master/screenshots/home.png)
 
 ![code](https://github.com/leducmanh1011/dotfiles/blob/master/screenshots/code.png)
 
+![nvim](https://github.com/leducmanh1011/dotfiles/blob/master/screenshots/nvim.png)
 
 ## Contents
 
