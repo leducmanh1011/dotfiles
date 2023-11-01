@@ -18,8 +18,8 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
-    width: 1600;
-    height: 900px;
+    width: 950px;
+    height: 700px;
     border: 2px;
     border-radius: 8px;
     border-color: @border-col;
