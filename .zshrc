@@ -116,6 +116,7 @@ eval "$(rbenv init -)"
 
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
+export PATH="$PATH:$HOME/nvim-linux-x86_64/bin"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
