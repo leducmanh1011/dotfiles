@@ -54,4 +54,8 @@ rm -rf ~/.config/mako
 ln -sf ~/my-projects/dotfiles/wm/mako ~/.config/mako
 echo "Creating symlink to .config/mako in home directory."
 
+rm -rf ~/.fonts
+ln -s -f ~/my-projects/dotfiles/fonts ~/.fonts
+echo "Creating symlink to .fonts in home directory."
+
 create_symlinks

@@ -13,6 +13,7 @@ dunstontc.viml
 gencay.vscode-chatgpt
 sianglim.slim
 sumneko.lua
+be5invis.toml # alacritty
 )
 
 for i in ${pkglist[@]}; do
