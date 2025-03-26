@@ -8,19 +8,19 @@ return {
 
       -- set termguicolors to enable highlight groups
       vim.opt.termguicolors = true
-      
+
       require("nvim-tree").setup({
         auto_reload_on_write = true,
         sort_by = "case_sensitive",
         reload_on_bufenter = true,
         view = {
           width =50,
-          mappings = {
-            list = {
-              { key = "u", action = "dir_up" },
-              { key = "U", action = "dir_down"},
-            },
-          },
+          -- mappings = {
+          --   list = {
+          --     { key = "u", action = "dir_up" },
+          --     { key = "U", action = "dir_down"},
+          --   },
+          -- },
         },
         renderer = {
           group_empty = true,
