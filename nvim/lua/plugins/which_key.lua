@@ -3,7 +3,7 @@ return {
   event = "CursorHold",
   config = function()
     require("which-key").setup({
-      window = {
+      win = {
         border = "rounded",
         margin = { 0, 0, 2, 0 },
       },

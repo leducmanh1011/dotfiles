@@ -4,8 +4,9 @@ return {
   { "rose-pine/neovim", name = "rose-pine" },
   {
     "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
+    lazy = true,  -- Disable auto-load
+    -- priority = 1000,
+    enabled = false,
     opts = function()
       return {
         style = "night",
@@ -62,5 +63,7 @@ return {
       }
     end,
   },
-  { "tanvirtin/monokai.nvim" },
+  {
+    "tanvirtin/monokai.nvim",
+  },
 }
