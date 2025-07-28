@@ -4,7 +4,19 @@ return {
     "b0o/incline.nvim",
     event = "BufReadPre",
     config = function()
-      local colors = require("tokyonight.colors").setup()
+      -- Use fallback colors that work with any colorscheme
+      local colors = {
+        black = "#000000",
+        white = "#ffffff",
+        bg_highlight = "#3e4451",
+        orange = "#FF8800",
+        error = "#ec5f67",
+        warning = "#ECBE7B",
+        info = "#008080",
+        hint = "#51afef",
+        purple = "#a9a1e1",
+      }
+
       require("incline").setup({
         highlight = {
           groups = {
@@ -27,7 +39,17 @@ return {
     event = "BufReadPost",
     config = function()
       local scrollbar = require("scrollbar")
-      local colors = require("tokyonight.colors").setup()
+      -- Use fallback colors that work with any colorscheme
+      local colors = {
+        bg_highlight = "#3e4451",
+        orange = "#FF8800",
+        error = "#ec5f67",
+        warning = "#ECBE7B",
+        info = "#008080",
+        hint = "#51afef",
+        purple = "#a9a1e1",
+      }
+
       scrollbar.setup({
         handle = { color = colors.bg_highlight },
         excluded_filetypes = { "prompt", "TelescopePrompt", "noice", "notify" },
@@ -62,31 +84,52 @@ return {
   -- show tabline name each file
   {
     "akinsho/bufferline.nvim",
+    version = "v4.5.3", -- Pin specific version
+    dependencies = "nvim-tree/nvim-web-devicons",
+    lazy = false,
     config = function()
-      local bufferline = require("bufferline")
+      local status_ok, bufferline = pcall(require, "bufferline")
+      if not status_ok then
+        return
+      end
+
       bufferline.setup({
         options = {
-            numbers = "ordinal",
-            -- Only show if more than 2 buffers (needed for dashboard)
-            always_show_bufferline = false,
-            show_buffer_close_icons = true,
-            show_close_icon = true,
-            offsets = {
-              {
-                filetype = "NvimTree",
-                text = "File Explorer", -- "File Explorer" | function ,
-                text_align = "center",
-                separator = true,
-              },
+          numbers = "none",
+          close_command = "bdelete! %d",
+          right_mouse_command = "bdelete! %d",
+          left_mouse_command = "buffer %d",
+          indicator = {
+            style = "icon",
+            icon = "▎",
+          },
+          buffer_close_icon = "",
+          modified_icon = "●",
+          close_icon = "",
+          show_buffer_icons = true,
+          show_buffer_close_icons = true,
+          show_close_icon = true,
+          always_show_bufferline = true,
+          separator_style = "thin",
+          offsets = {
+            {
+              filetype = "NvimTree",
+              text = "File Explorer",
+              text_align = "center",
+              separator = true,
             },
+          },
         },
-        -- highlights = require("catppuccin.groups.integrations.bufferline").get({})(),
       })
 
       local map = require("config/keymaps").map
       for n = 1, 9 do
           map("n", "<leader>" .. n, "<CMD>BufferLineGoToBuffer" .. n .. "<CR>", { desc = "Go to Buffer " .. n })
       end
+
+      -- Simple keymaps
+      map("n", "<S-h>", "<CMD>BufferLineCyclePrev<CR>", { desc = "Previous buffer" })
+      map("n", "<S-l>", "<CMD>BufferLineCycleNext<CR>", { desc = "Next buffer" })
     end,
   },
   -- smooth close buffer
@@ -97,11 +140,11 @@ return {
         next = "tabs",  -- or "cycle", "alternate"
         quit = false,    -- quit Neovim when last buffer is closed
       })
-      
+
       local map = require("config/keymaps").map
 
       map("n", "<leader>q", "<CMD>BufDel<CR>", { desc = "Delete the current buffer" })
-      map("n", "<leader>q!", "<CMD>BufDel<CR>", { desc = "Delete the current buffer and ignore changes" }) 
+      map("n", "<leader>Q", "<CMD>BufDel!<CR>", { desc = "Force delete the current buffer" })
     end,
   },
 }
